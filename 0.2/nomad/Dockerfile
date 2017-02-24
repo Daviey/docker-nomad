@@ -1,7 +1,7 @@
 FROM alpine:3.2
 
-ENV NOMAD_VERSION 0.2.3
-ENV NOMAD_SHA256 0f3a7083d160893a291b5f8b4359683c2df7991fa0a3e969f8785ddb40332a8c
+ENV NOMAD_VERSION 0.5.4
+ENV NOMAD_SHA256 ed9eb471b9f5bab729cfa402db5aa56e1d935c328ac48327267e0ea53568d5c2
 
 RUN apk --update add curl ca-certificates && \
     curl -Ls https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.21-r2/glibc-2.21-r2.apk > /tmp/glibc-2.21-r2.apk && \
