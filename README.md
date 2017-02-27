@@ -6,9 +6,9 @@ This project is a Docker container for [Nomad](https://www.nomadproject.io) that
 ##Getting the container
 The container is very small and based on Alpine base image.
 ```
-docker pull aatarasoff/nomad           //base image
-docker pull aatarasoff/nomad-server    //server pre-configured image
-docker pull aatarasoff/nomad-client    //client pre-configured image
+docker pull daviey/nomad           //base image
+docker pull daviey/nomad-server    //server pre-configured image
+docker pull daviey/nomad-client    //client pre-configured image
 ```
 
 ##Using the container
@@ -20,7 +20,7 @@ docker run -d --net host --name nomad \
   -p 4647:4647 -p 4647:4647/udp \
   -p 4648:4648 -p 4648:4648/udp \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  aatarasoff/nomad -dev -bind=<your_binding_ip_address>
+  daviey/nomad -dev -bind=<your_binding_ip_address>
 ```
 Standalone configuration is recommended for developing only.
 
@@ -32,7 +32,7 @@ docker run -d --net host --name nomad \
   -p 4647:4647 -p 4647:4647/udp \
   -p 4648:4648 -p 4648:4648/udp \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  aatarasoff/nomad-server -bind=<your_binding_ip_address>
+  daviey/nomad-server -bind=<your_binding_ip_address>
 ```
 Next step is joining nodes number two and three to node number one:
 ```
@@ -47,7 +47,7 @@ docker run -d --net host --name nomad \
   -p 4647:4647 -p 4647:4647/udp \
   -p 4648:4648 -p 4648:4648/udp \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  aatarasoff/nomad-client -bind=<your_binding_ip_address> -servers http://<node1_ip>:4647
+  daviey/nomad-client -bind=<your_binding_ip_address> -servers http://<node1_ip>:4647
 ```
 Check that client nodes is available:
 ```

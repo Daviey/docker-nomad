@@ -1,4 +1,4 @@
-FROM aatarasoff/nomad:0.2
+FROM daviey/nomad:0.2
 ADD ./config /config/
 VOLUME /data
 

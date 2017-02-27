@@ -1,2 +1,2 @@
 build:
-	docker build -t aatarasoff/nomad:0.2 .
+	docker build -t daviey/nomad:0.2 .
