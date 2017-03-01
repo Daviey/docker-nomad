@@ -1,6 +1,4 @@
-VERSION=0.2
-
 build:
-	make -C $(VERSION)/nomad
-	make -C $(VERSION)/nomad-client
-	make -C $(VERSION)/nomad-server
+	make -C nomad
+	make -C nomad-client
+	make -C nomad-server
